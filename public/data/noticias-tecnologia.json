@@ -1,0 +1,6 @@
+[
+  { "id": 1, "titulo": "React sigue liderando el frontend", "fecha": "2026-10-28", "contenido": "La librería continúa siendo una de las más usadas para construir interfaces web gracias a su modelo de componentes." },
+  { "id": 2, "titulo": "Bootstrap 5 y el diseño responsivo", "fecha": "2026-10-15", "contenido": "El sistema de grillas de Bootstrap permite adaptar un sitio a móviles, tablets y escritorio con pocas clases." },
+  { "id": 3, "titulo": "La importancia de las pruebas unitarias", "fecha": "2026-09-30", "contenido": "Herramientas como Jasmine y Karma ayudan a detectar errores antes de que lleguen a producción." },
+  { "id": 4, "titulo": "Accesibilidad web en 2026", "fecha": "2026-09-12", "contenido": "Textos alternativos, buen contraste y navegación por teclado hacen que un sitio sea usable por todas las personas." }
+]

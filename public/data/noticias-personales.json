@@ -1,0 +1,5 @@
+[
+  { "id": 1, "titulo": "Publiqué mi portafolio en GitHub Pages", "fecha": "2026-11-04", "contenido": "Terminé la primera versión de este portafolio desarrollado con React, Bootstrap y pruebas con Jasmine y Karma." },
+  { "id": 2, "titulo": "Nuevo proyecto: API de Biblioteca", "fecha": "2026-10-20", "contenido": "Desarrollé una API REST con Spring Boot como parte de mi formación en desarrollo fullstack." },
+  { "id": 3, "titulo": "Inicio de Desarrollo Fullstack II", "fecha": "2026-08-10", "contenido": "Comencé la asignatura DSY1104, donde aprendo frontend con React y pruebas automatizadas." }
+]

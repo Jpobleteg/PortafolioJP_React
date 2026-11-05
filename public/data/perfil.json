@@ -1,0 +1,13 @@
+{
+  "nombre": "Javiera Poblete",
+  "titulo": "Estudiante de Ingeniería en Informática · Desarrolladora Fullstack",
+  "foto": "img/perfil.svg",
+  "biografia": "Soy estudiante de Ingeniería en Informática apasionada por el desarrollo web. Me gusta construir interfaces limpias, accesibles y bien probadas, y estoy aprendiendo a llevar mis proyectos de la idea al despliegue.",
+  "sobreMi": "Me enfoco en el desarrollo frontend con React y Bootstrap, y en el backend con Java y Spring Boot. Valoro el código ordenado, las pruebas automatizadas y el trabajo en equipo con Git y GitHub.",
+  "habilidades": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Jasmine", "Karma", "Git", "Java", "SQL"],
+  "redes": {
+    "github": "https://github.com/TU-USUARIO",
+    "linkedin": "https://www.linkedin.com/in/TU-USUARIO",
+    "correo": "javiera.poblete@correo.cl"
+  }
+}

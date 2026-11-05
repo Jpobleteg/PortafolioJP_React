@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "titulo": "Tienda Online",
+    "descripcion": "E-commerce con catálogo de productos, carrito de compras y filtro por categorías.",
+    "imagen": "img/proyecto-tienda.svg",
+    "tecnologias": ["React", "Bootstrap", "JavaScript"],
+    "enlace": "https://github.com/TU-USUARIO/tienda-online"
+  },
+  {
+    "id": 2,
+    "titulo": "Gestor de Tareas",
+    "descripcion": "Aplicación para crear, completar y filtrar tareas, con datos guardados en el navegador.",
+    "imagen": "img/proyecto-tareas.svg",
+    "tecnologias": ["JavaScript", "HTML5", "CSS3"],
+    "enlace": "https://github.com/TU-USUARIO/gestor-tareas"
+  },
+  {
+    "id": 3,
+    "titulo": "API de Biblioteca",
+    "descripcion": "API REST para administrar libros, autores y préstamos, con pruebas unitarias.",
+    "imagen": "img/proyecto-api.svg",
+    "tecnologias": ["Java", "Spring Boot", "SQL"],
+    "enlace": "https://github.com/TU-USUARIO/api-biblioteca"
+  }
+]
