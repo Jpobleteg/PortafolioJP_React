@@ -1,0 +1,112 @@
+/* Estilos personalizados que complementan a Bootstrap */
+:root {
+  --color-acento: #0d6efd;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* compensa la navbar fija al saltar a una sección */
+}
+
+.seccion {
+  padding: 4.5rem 0;
+}
+
+.seccion-intro {
+  padding-top: 5rem;
+  background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+}
+
+.titulo-seccion {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.titulo-seccion::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--color-acento);
+}
+
+.foto-perfil {
+  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border: 6px solid #fff;
+}
+
+.biografia {
+  max-width: 60ch;
+}
+
+/* Listas de etiquetas sin viñetas */
+.lista-habilidades,
+.lista-tecnologias {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tarjeta-proyecto {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-proyecto:hover,
+.tarjeta-proyecto:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12) !important;
+}
+
+.tarjeta-proyecto .card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  height: auto;
+}
+
+/* Accesibilidad: enlace para saltar al contenido, visible solo con teclado */
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1rem;
+  background: #000;
+  color: #fff;
+}
+
+.saltar-contenido:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Foco visible para navegación por teclado */
+a:focus-visible,
+button:focus-visible,
+.form-control:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .tarjeta-proyecto {
+    transition: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .seccion {
+    padding: 3rem 0;
+  }
+}
