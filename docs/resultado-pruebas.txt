@@ -1,0 +1,113 @@
+
+> portafolio-react@1.0.0 test
+> karma start karma.conf.cjs
+
+05 11 2026 01:35:04.881:INFO [karma-server]: Karma v6.4.4 server started at http://localhost:9876/
+05 11 2026 01:35:04.882:INFO [launcher]: Launching browsers ChromeHeadlessCI with concurrency unlimited
+05 11 2026 01:35:04.886:INFO [launcher]: Starting browser ChromeHeadless
+05 11 2026 01:35:05.553:INFO [Chrome Headless 153.0.0.0 (Linux 0.0.0)]: Connected on socket TU_j4rAfKrTUeFCDAAAA with id 92036139
+(node:1031) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+
+  Componente ProyectoCard
+    ✓ tiene un enlace seguro al repositorio que abre en otra pestaña
+    ✓ se renderiza como una Card de Bootstrap con título y descripción
+    ✓ lista las tecnologías utilizadas
+    ✓ muestra la imagen con alt y carga diferida (lazy)
+
+  Componente PiePagina
+    ✓ no muestra enlaces si no se entregan redes
+    ✓ muestra el año actual y los enlaces de redes entregados
+
+  Componente Introduccion
+    ✓ muestra el título y la biografía recibidos por props
+    ✓ incluye botones que llevan a proyectos y contacto
+    ✓ muestra la foto con un texto alternativo accesible
+    ✓ renderiza el nombre en un encabezado h1
+
+  Componente SobreMi
+    ✓ no muestra la lista de habilidades si no se entregan
+    ✓ muestra la descripción y una etiqueta por cada habilidad
+
+  Componente App (integración)
+    ✓ renderiza todas las secciones con los datos de los JSON
+    ✓ incluye un enlace para saltar al contenido (navegación por teclado)
+    ✓ muestra un mensaje de carga mientras llega el perfil
+    ✓ muestra un error si el perfil no se puede cargar
+    ✓ todas las imágenes tienen texto alternativo
+
+  Servicio de datos (datosService)
+    formatearFecha
+      ✓ convierte una fecha ISO al formato largo en español
+      ✓ devuelve un texto por defecto si la fecha no es válida
+    ordenarPorFecha
+      ✓ ordena de la más reciente a la más antigua sin modificar el arreglo original
+    cargarJSON
+      ✓ devuelve el contenido del JSON cuando la respuesta es correcta (fetch simulado)
+      ✓ lanza un error descriptivo cuando el archivo no existe (404)
+
+  Componente Noticia
+    ✓ muestra título, fecha formateada y contenido
+
+  Componente BarraNavegacion
+    ✓ crea un enlace por cada sección recibida en props
+    ✓ abre el menú colapsable al hacer clic en el botón (evento + DOM)
+    ✓ muestra el nombre como marca de la barra
+
+  Formulario de Contacto
+    interacción con el DOM
+      ✓ marca los campos inválidos y no envía si el formulario está vacío
+      ✓ actualiza el estado al escribir en un campo
+      ✓ oculta la confirmación cuando el usuario vuelve a escribir
+      ✓ envía los datos, muestra confirmación y limpia el formulario
+      ✓ renderiza los campos con su etiqueta asociada (accesibilidad)
+    validarContacto (lógica pura)
+      ✓ no devuelve errores si los datos son válidos
+      ✓ detecta nombre vacío, correo inválido y mensaje corto
+
+  Componente Proyectos (state + eventos)
+    ✓ filtra los proyectos al hacer clic en una tecnología y actualiza aria-pressed
+    ✓ muestra un mensaje cuando no hay proyectos
+    ✓ muestra una tarjeta por cada proyecto (al menos tres)
+    ✓ genera un botón de filtro por cada tecnología sin repetir
+    ✓ vuelve a mostrar todos los proyectos al elegir "Todas"
+
+  Componente SeccionNoticias (carga desde JSON)
+    ✓ no muestra el botón si hay menos noticias que el límite
+    ✓ el botón "Ver todas" muestra y oculta el resto de noticias (evento + state)
+    ✓ carga las noticias, las ordena por fecha y muestra solo el límite inicial
+    ✓ muestra una alerta si ocurre un error al cargar
+    ✓ muestra un mensaje si el JSON viene vacío
+    ✓ muestra un indicador de carga mientras se lee el JSON
+    ✓ no actualiza el estado si el componente se desmonta antes de terminar la carga
+
+Chrome Headless 153.0.0.0 (Linux 0.0.0): Executed 45 of 45 SUCCESS (0.21 secs / 0.174 secs)
+TOTAL: 45 SUCCESS
+
+
+=============================== Coverage summary ===============================
+Statements   : 100% ( 102/102 )
+Branches     : 86.56% ( 58/67 )
+Functions    : 100% ( 36/36 )
+Lines        : 100% ( 88/88 )
+================================================================================
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |     100 |    86.56 |     100 |     100 |                   
+ src               |     100 |    69.23 |     100 |     100 |                   
+  App.tsx          |     100 |    69.23 |     100 |     100 | 26,41-80          
+ src/components    |     100 |    93.02 |     100 |     100 |                   
+  ...avegacion.tsx |     100 |      100 |     100 |     100 |                   
+  Contacto.tsx     |     100 |    91.66 |     100 |     100 | 47                
+  Introduccion.tsx |     100 |      100 |     100 |     100 |                   
+  Noticia.tsx      |     100 |      100 |     100 |     100 |                   
+  PiePagina.tsx    |     100 |      100 |     100 |     100 |                   
+  ProyectoCard.tsx |     100 |      100 |     100 |     100 |                   
+  Proyectos.tsx    |     100 |    85.71 |     100 |     100 | 17                
+  ...nNoticias.tsx |     100 |    93.75 |     100 |     100 | 20                
+  SobreMi.tsx      |     100 |      100 |     100 |     100 |                   
+ src/services      |     100 |    81.81 |     100 |     100 |                   
+  datosService.ts  |     100 |      100 |     100 |     100 |                   
+  useDatosJSON.ts  |     100 |    71.42 |     100 |     100 | 17,32             
+-------------------|---------|----------|---------|---------|-------------------
