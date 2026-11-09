@@ -1,11 +1,7 @@
-// Utilidades compartidas por las pruebas: montar componentes y simular eventos del DOM.
 import { act } from 'react';
 import { createRoot } from 'react-dom/client';
 
-/**
- * Monta un componente React en un <div> real del documento.
- * @returns {{ contenedor: HTMLElement, desmontar: Function }}
- */
+
 export function montar(elemento) {
   const contenedor = document.createElement('div');
   document.body.appendChild(contenedor);
@@ -22,14 +18,13 @@ export function montar(elemento) {
   };
 }
 
-/** Simula un clic del usuario. */
+
 export function clic(elemento) {
   act(() => {
     elemento.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
   });
 }
 
-/** Simula que el usuario escribe en un input o textarea (React escucha el evento "input"). */
 export function escribir(elemento, valor) {
   const prototipo =
     elemento.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
@@ -40,21 +35,19 @@ export function escribir(elemento, valor) {
   });
 }
 
-/** Simula el envío de un formulario. */
+
 export function enviar(formulario) {
   act(() => {
     formulario.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
   });
 }
-
-/** Espera a que se resuelvan las promesas pendientes (por ejemplo, la carga de JSON). */
+ 
 export async function esperar() {
   await act(async () => {
     await new Promise((resolver) => setTimeout(resolver, 0));
   });
 }
 
-/** Promesa controlable manualmente, útil para probar estados de "cargando". */
 export function promesaPendiente() {
   let resolver;
   let rechazar;

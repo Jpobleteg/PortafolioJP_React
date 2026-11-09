@@ -5,9 +5,7 @@ interface SobreMiProps {
   habilidades?: string[];
 }
 
-/**
- * Sección "Sobre mí" (componente personalizado y reutilizable).
- */
+
 function SobreMi({ descripcion, habilidades = [] }: SobreMiProps) {
   return (
     <section id="sobre-mi" className="seccion bg-light" aria-labelledby="titulo-sobre-mi">

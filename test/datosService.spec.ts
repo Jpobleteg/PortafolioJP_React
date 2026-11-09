@@ -4,7 +4,7 @@ describe('Servicio de datos (datosService)', () => {
   describe('cargarJSON', () => {
     it('devuelve el contenido del JSON cuando la respuesta es correcta (fetch simulado)', async () => {
       const datosFalsos = [{ id: 1, titulo: 'Prueba' }];
-      // MOCK: reemplazamos fetch para no depender de la red ni de archivos reales
+     
       spyOn(window, 'fetch').and.returnValue(
         Promise.resolve(new Response(JSON.stringify(datosFalsos), { status: 200 }))
       );

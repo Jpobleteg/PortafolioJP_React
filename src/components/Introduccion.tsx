@@ -7,9 +7,7 @@ export interface IntroduccionProps {
   biografia: string;
 }
 
-/**
- * Sección de introducción: nombre, foto profesional y biografía breve.
- */
+
 function Introduccion({ nombre, titulo, foto, biografia }: IntroduccionProps) {
   return (
     <section id="inicio" className="seccion seccion-intro" aria-labelledby="titulo-intro">

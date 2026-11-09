@@ -18,11 +18,7 @@ export const ENLACES: Enlace[] = [
   { id: 'contacto', texto: 'Contacto' },
 ];
 
-/**
- * Componente raíz. Carga el perfil y los proyectos desde JSON
- * y los entrega como props a los componentes hijos.
- * El cargador se puede reemplazar en las pruebas.
- */
+
 function App({ cargador = cargarJSON }: { cargador?: Cargador }) {
   const perfil = useDatosJSON<Perfil>('data/perfil.json', cargador);
   const proyectos = useDatosJSON<Proyecto[]>('data/proyectos.json', cargador);

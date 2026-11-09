@@ -1,13 +1,10 @@
 import { Badge, Button, Card } from 'react-bootstrap';
 import type { Proyecto } from '../types';
 
-// Recibe todos los campos del proyecto excepto el id
+
 export type ProyectoCardProps = Omit<Proyecto, 'id'>;
 
-/**
- * Tarjeta de proyecto (Card de Bootstrap personalizada).
- * Muestra imagen, título, descripción, tecnologías y enlace al repositorio/demo.
- */
+
 function ProyectoCard({ titulo, descripcion, imagen, tecnologias, enlace }: ProyectoCardProps) {
   return (
     <Card className="h-100 tarjeta-proyecto shadow-sm" as="article">

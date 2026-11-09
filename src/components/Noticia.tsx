@@ -4,9 +4,7 @@ import type { NoticiaDatos } from '../types';
 
 type NoticiaProps = Omit<NoticiaDatos, 'id'>;
 
-/**
- * Una noticia individual: título, fecha y contenido breve.
- */
+
 function Noticia({ titulo, fecha, contenido }: NoticiaProps) {
   return (
     <Card as="article" className="h-100 noticia border-0 border-start border-4 border-primary shadow-sm">

@@ -1,6 +1,4 @@
-// Tipos compartidos del portafolio (describen la forma de los archivos JSON)
-
-export interface Redes {
+ export interface Redes {
   github?: string;
   linkedin?: string;
   correo?: string;
@@ -28,7 +26,7 @@ export interface Proyecto {
 export interface NoticiaDatos {
   id: number;
   titulo: string;
-  fecha: string; // formato AAAA-MM-DD
+  fecha: string; 
   contenido: string;
 }
 
@@ -43,5 +41,5 @@ export interface DatosContacto {
   mensaje: string;
 }
 
-/** Función que recibe la ruta de un JSON y devuelve una promesa con su contenido. */
+
 export type Cargador = <T>(ruta: string) => Promise<T>;

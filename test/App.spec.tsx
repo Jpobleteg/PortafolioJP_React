@@ -2,7 +2,7 @@ import App from '../src/App';
 import type { Cargador } from '../src/types';
 import { buscar, esperar, montar, promesaPendiente, type Vista } from './helpers';
 
-// Datos simulados (mocks) que reemplazan a los archivos JSON reales
+
 const MOCK_DATOS: Record<string, unknown> = {
   'data/perfil.json': {
     nombre: 'Persona de Prueba',
@@ -45,7 +45,7 @@ describe('Componente App (integración)', () => {
     vista = montar(<App cargador={cargador} />);
     await esperar();
 
-    // Se pidieron los 4 archivos JSON
+    
     expect(cargador.calls.allArgs().map((a) => a[0]).sort()).toEqual(Object.keys(MOCK_DATOS).sort());
 
     const c = vista.contenedor;

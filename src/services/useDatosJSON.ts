@@ -8,19 +8,14 @@ export interface EstadoDatos<T> {
   error: string | null;
 }
 
-/**
- * Hook personalizado que carga un JSON y guarda el resultado en el estado (state).
- * Devuelve { datos, cargando, error } para que el componente decida qué mostrar.
- * @param ruta Ruta del archivo JSON.
- * @param cargador Función que carga los datos (se puede reemplazar en pruebas).
- */
+
 export function useDatosJSON<T>(ruta: string, cargador: Cargador = cargarJSON): EstadoDatos<T> {
   const [datos, setDatos] = useState<T | null>(null);
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    let activo = true; // evita actualizar el estado si el componente se desmonta
+    let activo = true; 
     setCargando(true);
     setError(null);
 

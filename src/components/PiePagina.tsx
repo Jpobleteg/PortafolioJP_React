@@ -6,9 +6,7 @@ interface PiePaginaProps {
   redes?: Redes;
 }
 
-/**
- * Pie de página con enlaces a redes.
- */
+
 function PiePagina({ nombre, redes = {} }: PiePaginaProps) {
   const anio = new Date().getFullYear();
   return (

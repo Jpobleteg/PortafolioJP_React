@@ -9,15 +9,11 @@ interface ProyectosProps {
 
 export const TODAS = 'Todas';
 
-/**
- * Sección de proyectos con filtro por tecnología.
- * - props: lista de proyectos (viene del JSON).
- * - state: tecnología seleccionada en el filtro.
- */
+
 function Proyectos({ proyectos = [] }: ProyectosProps) {
   const [filtro, setFiltro] = useState<string>(TODAS);
 
-  // Lista única de tecnologías para construir los botones del filtro
+  
   const tecnologias = useMemo<string[]>(() => {
     const unicas = new Set(proyectos.flatMap((p) => p.tecnologias));
     return [TODAS, ...unicas];

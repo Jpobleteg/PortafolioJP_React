@@ -6,10 +6,6 @@ interface BarraNavegacionProps {
   enlaces: Enlace[];
 }
 
-/**
- * Barra de navegación (componente Navbar de Bootstrap).
- * Se colapsa en un menú "hamburguesa" en pantallas pequeñas.
- */
 function BarraNavegacion({ nombre, enlaces }: BarraNavegacionProps) {
   return (
     <Navbar bg="dark" data-bs-theme="dark" expand="lg" sticky="top" collapseOnSelect>

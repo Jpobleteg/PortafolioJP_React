@@ -13,10 +13,6 @@ interface SeccionNoticiasProps {
   cargador?: Cargador;
 }
 
-/**
- * Sección de noticias que se carga dinámicamente desde un archivo JSON.
- * Es reutilizable: el portafolio la usa dos veces con archivos distintos.
- */
 function SeccionNoticias({ id, titulo, ruta, limite = 2, cargador = cargarJSON }: SeccionNoticiasProps) {
   const { datos, cargando, error } = useDatosJSON<NoticiaDatos[]>(ruta, cargador);
   const [verTodas, setVerTodas] = useState(false);

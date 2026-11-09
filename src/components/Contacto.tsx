@@ -12,10 +12,7 @@ interface ContactoProps {
 const VACIO: DatosContacto = { nombre: '', correo: '', mensaje: '' };
 const REGEX_CORREO = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-/**
- * Valida los campos del formulario. Se exporta para probarla de forma aislada.
- * @returns errores por campo (vacío si todo está correcto)
- */
+
 export function validarContacto({ nombre, correo, mensaje }: DatosContacto): ErroresContacto {
   const errores: ErroresContacto = {};
   if (!nombre.trim()) errores.nombre = 'Ingresa tu nombre.';
@@ -24,9 +21,7 @@ export function validarContacto({ nombre, correo, mensaje }: DatosContacto): Err
   return errores;
 }
 
-/**
- * Formulario de contacto (Form de Bootstrap) controlado con state.
- */
+
 function Contacto({ correoDestino, onEnviar }: ContactoProps) {
   const [valores, setValores] = useState<DatosContacto>(VACIO);
   const [errores, setErrores] = useState<ErroresContacto>({});

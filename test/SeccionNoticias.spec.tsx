@@ -14,7 +14,7 @@ describe('Componente SeccionNoticias (carga desde JSON)', () => {
   afterEach(() => vista && vista.desmontar());
 
   it('muestra un indicador de carga mientras se lee el JSON', () => {
-    // MOCK: un cargador que nunca termina, para observar el estado "cargando"
+   
     const { promesa } = promesaPendiente();
     const cargador = jasmine.createSpy('cargador').and.returnValue(promesa);
 
